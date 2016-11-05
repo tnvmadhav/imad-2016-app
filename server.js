@@ -13,8 +13,71 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
+var articleOne = {
+    title : 'Article one |tnvmadhav',
+    heading:  'Gotta code em all(there is no code involved for now)XP' ,
+    date : '11th October 2016',
+    content : `
+     </div>
+                <div>
+                  <p1>
+              Hi , I am T .Venu Madhav . This is me doing some cool things using 
+              some html and css. There is no limit to  imagination and hence 
+              i would like to  extend my imagination with the wonderful 
+              world of web designing. 
+              Cheers :D 
+               
+               </p1>
+            </div>
+    
+     </div> `
+};
+
+
+function createTemplate(data)
+{
+    var title = data.title;
+    var heading = data.title;
+    var date = data.date;
+    var content = data.content;
+    var htmlTemplate = `
+    
+                  <html>
+    <head>
+        <title>
+         ${title}
+        </title>
+        <meta name ="viewport" , content = "width-device-width , initial-scale-1" />
+        <link href="/ui/style.css" rel="stylesheet" />
+    </head>
+    <body>
+    <div class="container">
+             <div>
+                <a href = "/">Home</a>
+             </div>
+              <hr/>
+              <div>
+             ${date}
+               </div>
+    
+               <div>
+                <h3>
+                 ${heading}
+                  </h3>
+                 </div>
+                <div>
+                 ${content}
+            </div>
+    
+     </div>
+    </body>
+</html> 
+  `;
+  return htmlTemplate;
+}
+
 app.get('/article-one', function(req,res) {
-    res.sendFile(path.join(__dirname, 'ui', '/article-one.html'));
+    res.send(createTemplate(articleOne));
 });
 
 app.get('/article-two', function(req,res) {
