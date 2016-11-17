@@ -1,13 +1,13 @@
 console.log('Loaded!');
 
 var img = document.getElementById('madi');
-var max-width = '150px';
-var max-height = '150px';
+var width = '150px';
+var height = '150px';
  function expand() {
-   max-width = max-width + 1;
-   max-height = max-height + 1;
-   img.style.max-width = max-width+"px" ;
-   img.style.max-width = max-height+"px";
+   width = width + 1;
+   height = height + 1;
+   img.style.width = width+"px" ;
+   img.style.height = height+"px";
 }
 img.onclick = function ()
 {    
