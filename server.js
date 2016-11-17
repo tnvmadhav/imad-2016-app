@@ -13,25 +13,48 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
-var articleOne = {
+var articles = {
+'article-one': {
     title : 'Article one |tnvmadhav',
     heading:  'Gotta code em all(there is no code involved for now)XP' ,
     date : '11th October 2016',
     content : `
-     </div>
-                <div>
-                  <p1>
+               <p1>
               Hi , I am T .Venu Madhav . This is me doing some cool things using 
               some html and css. There is no limit to  imagination and hence 
               i would like to  extend my imagination with the wonderful 
               world of web designing. 
               Cheers :D 
                
-               </p1>
-            </div>
-    
-     </div> `
-};
+               </p1> `},
+'article-two': {
+    title : 'Article two |tnvmadhav',
+    heading:  'Gotta code em all(there is no code involved for now)XP' ,
+    date : '11th October 2016',
+    content : `
+               <p1>
+              Hi , I am T .Venu Madhav . This is me doing some cool things using 
+              some html and css. There is no limit to  imagination and hence 
+              i would like to  extend my imagination with the wonderful 
+              world of web designing. 
+              Cheers :D 
+               
+               </p1> `}, 
+'article-three':{
+    title : 'Article one |tnvmadhav',
+    heading:  'Gotta code em all(there is no code involved for now)XP' ,
+    date : '11th October 2016',
+    content : `
+               <p1>
+              Hi , I am T .Venu Madhav . This is me doing some cool things using 
+              some html and css. There is no limit to  imagination and hence 
+              i would like to  extend my imagination with the wonderful 
+              world of web designing. 
+              Cheers :D 
+               
+               </p1> `},               
+               };
+
 
 
 function createTemplate(data)
@@ -42,7 +65,7 @@ function createTemplate(data)
     var content = data.content;
     var htmlTemplate = `
     
-                  <html>
+<html>
     <head>
         <title>
          ${title}
@@ -76,17 +99,11 @@ function createTemplate(data)
   return htmlTemplate;
 }
 
-app.get('/article-one', function(req,res) {
-    res.send(createTemplate(articleOne));
+app.get('/:ArticleName', function(req,res) {
+   var ArticleName =  req.params.ArticleName;
+    res.send(createTemplate(articles[ArticleName]));
 });
 
-app.get('/article-two', function(req,res) {
-    res.sendFile(path.join(__dirname, 'ui', '/article-two.html'));
-});
-
-app.get('/article-three', function(req,res) {
-   res.sendFile(path.join(__dirname, 'ui', '/article-three.html'));
-});
 
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
