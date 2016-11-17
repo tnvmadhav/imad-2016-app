@@ -1,4 +1,8 @@
 console.log('Loaded!');
 
-var v= document.getElementById('kkk');
-v.innerHTML = 'Yo';
+var img = document.getElementById('madi');
+
+img.onclick = function ()
+{
+    img.style.marginLeft = "100px";
+};
