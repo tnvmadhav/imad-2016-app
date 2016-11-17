@@ -4,8 +4,8 @@ var img = document.getElementById('madi');
 var width = '150px';
 var height = '150px';
  function expand() {
-   width = width + 1;
-   height = height + 1;
+   width = width + 100;
+   height = height + 100;
    img.style.width = width+"px" ;
    img.style.height = height+"px";
 }
