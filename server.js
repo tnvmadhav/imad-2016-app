@@ -41,7 +41,7 @@ var articles = {
                
                </p1> `}, 
 'article-three':{
-    title : 'Article one |tnvmadhav',
+    title : 'Article three |tnvmadhav',
     heading:  'Gotta code em all(there is no code involved for now)XP' ,
     date : '11th October 2016',
     content : `
