@@ -2,7 +2,7 @@ console.log('Loaded!');
 
 var img = document.getElementById('madi');
 
-var height = '150px';
+var height = 0;
  function expand() {
    
    height = height + 50;
