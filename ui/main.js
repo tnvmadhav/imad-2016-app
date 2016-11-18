@@ -10,5 +10,5 @@ var height = 0;
 }
 img.onclick = function ()
 {    
-   var interval = setInterval(expand, 50);
+   var interval = setInterval(expand, 2000);
 };
