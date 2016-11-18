@@ -19,7 +19,7 @@ body {
 .img-medium {
     display: inline-block;
     border: 1px solid white;
-    border-radius:100%;
+    border-radius:50%;
     transition: 0.3s;
 
 }
