@@ -28,7 +28,7 @@ body {
     box-shadow: 0 0 5px 1px rgba(51, 255, 0, 1);                 
 }
 .container {
-               background:rgb(231, 224, 222);
+               background:rgba(208, 219, 205, 1);
                max-width: 800px;
                font-family: calibri light;
                margin : 0 auto;
