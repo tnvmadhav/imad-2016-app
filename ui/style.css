@@ -19,25 +19,15 @@ body {
 .img-medium {
     display: inline-block;
     border: 1px solid white;
-    border-radius: 300%;
-    padding-right:100px;
+    border-radius:100%
+    
     transition: 0.3s;
 
 }
 .img-medium:hover {
     box-shadow: 0 0 5px 1px rgba(51, 255, 0, 1);                 
 }
-div.polaroid {
-  width: 80%;
-  background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 25px;
-}
 
-div.container {
-  text-align: center;
-  padding: 10px 20px;
-}
 .container {
                background:rgba(208, 219, 205, 1);
                max-width: 800px;
