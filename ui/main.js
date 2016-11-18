@@ -5,10 +5,10 @@ var img = document.getElementById('madi');
 var height = 0;
  function expand() {
    
-   height = height + 50;
+   height = height + 0.33;
    img.style.height = height+ 'px';
 }
 img.onclick = function ()
 {    
-   var interval = setInterval(expand, 2000);
+   var interval = setInterval(expand, 100);
 };
