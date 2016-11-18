@@ -20,7 +20,7 @@ body {
     display: inline-block;
     border: 1px solid white;
     border-radius: 300%;
-    padding: 5px;
+    padding-right:100000px;
     transition: 0.3s;
 
 }
