@@ -17,7 +17,8 @@ body {
 }
 
 .img-medium {
-    height: 200px;
+    height: 190px;
+    border: 10px;
 }
 .container {
                background:rgb(231, 224, 222);
