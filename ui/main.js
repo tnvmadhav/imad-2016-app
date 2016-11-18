@@ -10,5 +10,7 @@ var height = 200;
 }
 img.onclick = function ()
 {    
+    print("Hey you just clicked on me");
+    print("Better watch your finger");
    var interval = setInterval(expand, 40);
 };
