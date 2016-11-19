@@ -30,7 +30,7 @@ button.onclick = function() {
 
 //submit name
 
-/*var submit = document.getElementById('submit_btn');
+var submit = document.getElementById('submit_btn');
 submit.onclick  = function() {
   //Send a request to the server and send the names
   //Capture the list of names and render it in the list
@@ -45,7 +45,7 @@ submit.onclick  = function() {
           //take some action 
           if(request.status ===200) {
              var names = request.responseText;
-             name = JSON.parse(names);
+             names = JSON.parse(names);
  var  list = '';
  for(var i = 0; i< names.length; i++){
      list += '<li>'+ names[i] + '</li>';
@@ -62,4 +62,4 @@ var name = inputName.value;
   request.open('GET','http://tnvmadhav.imad.hasura-app.io/submit-name?name='+name,true);
   request.send(null);
   
-}; */
+}; 
