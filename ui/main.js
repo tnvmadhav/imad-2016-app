@@ -13,15 +13,20 @@ button.onclick = function() {
       if(request.readyState === XMLHttpRequest.DONE){
           //take some action 
           if(request.status ===200) {
-              var counter = request.responseText;
-              var span = document.getElementById('count');
-              span.innerHTML = counter.toString();
+             var names = request.responseText;
+             name = JSON.parse(names);
+ var  list = '';
+ for(var i = 0; i< names.length; i++){
+     list += '<li>'+ names[i] + '</li>';
+ }
+ var ul  = document.getElementByID('namelist');
+ ul.innerHTML = list;
           }
       }
   };
   
   //Make request 
-  request.open('GET','http://tnvmadhav.imad.hasura-app.io/counter',true);
+  request.open('GET','http://tnvmadhav.imad.hasura-app.io/submit-name?name='+name,true);
   request.send(null);
     
 };
@@ -34,11 +39,5 @@ var submit = document.getElementById('submit_btn');
 submit.onclick  = function() {
   //Send a request to the server and send the names
   //Capture the list of names and render it in the list
-  var names = ['name1','name2' , 'name3','name4'];
- var  list = '';
- for(var i = 0; i< names.length; i++){
-     list += '<li>'+ names[i] + '</li>';
- }
- var ul  = document.getElementByID('namelist');
- ul.innerHTML = list;
+  
 };
