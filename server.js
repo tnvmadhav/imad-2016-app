@@ -97,8 +97,7 @@ function createTemplate(data)
                 <div>
                  ${content}
             </div>
-    
-     </div>
+        </div>
     </body>
 </html> 
   `;
