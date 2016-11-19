@@ -99,6 +99,8 @@ function createTemplate(data)
             </div>
     
      </div>
+     Comment:<br />
+  <textarea name='comment' id='comment'></textarea><br />
     </body>
 </html> 
   `;
