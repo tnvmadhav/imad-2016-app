@@ -25,7 +25,7 @@ button.onclick = function() {
   };
   
   //Make request 
-  request.open('GET','http://tnvmadhav.imad.hasura-app.io/submit-name?name='+name,true);
+  request.open('GET','http://tnvmadhav.imad.hasura-app.io/count',true);
   request.send(null);
     
 };
