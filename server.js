@@ -105,7 +105,7 @@ function createTemplate(data)
   return htmlTemplate;
 }
 var names = [];
-app.get('/submit-name/', function(req,res) { //submit-name?name=xxxxxx
+app.get('/submit-name', function(req,res) { //submit-name?name=xxxxxx
     //Get name from request
     var name = req.query.name;
     
