@@ -19,9 +19,9 @@ body {
 .img-medium {
     display: inline-block;
     border: 1px solid white;
-    padding-right:100px;
     border-radius:50%;
     transition: 0.3s;
+    margin: left;
 
 }
 .img-medium:hover {
