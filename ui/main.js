@@ -98,7 +98,7 @@ submitc.onclick  = function() {
   //Make request 
   var inputNamec = document.getElementById('comment');
 var namec = inputNamec.value;
-  request.open('GET','http://tnvmadhav.imad.hasura-app.io/submit-name?name='+namec,true);
+  request.open('GET','http://tnvmadhav.imad.hasura-app.io/submit-comment?namec='+namec,true);
   request.send(null);
   
 }; 
