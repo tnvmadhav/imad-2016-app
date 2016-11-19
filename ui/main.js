@@ -69,35 +69,35 @@ var name = inputName.value;
 
 
 //comment box
-var submit2 = document.getElementById('submit_btn2');
-submit2.onclick  = function() {
+var submitc = document.getElementById('submit_btn2');
+submitc.onclick  = function() {
   //Send a request to the server and send the names
   //Capture the list of names and render it in the list
  
     
    //Create a request object 
-  var request =  new XMLHttpRequest();  
+  var requestc =  new XMLHttpRequest();  
   
   //Capture a response and store it in a variable
-  request.onreadystatechange = function() {
-      if(request.readyState === XMLHttpRequest.DONE){
+  requestc.onreadystatechange = function() {
+      if(requestc.readyState === XMLHttpRequest.DONE){
           //take some action 
-          if(request.status ===200) {
-             var names = request.responseText;
-             names = JSON.parse(names);
-          var  list = '';
+          if(requestc.status ===200) {
+             var comments = requestc.responseText;
+             comments = JSON.parse(comments);
+          var  listc = '';
           for(var i=0; i<names.length; i++){
-     list += '<li>'+ names[i] + '</li>';
+     listc += '<li>'+ names[i] + '</li>';
      }
- var ul  = document.getElementById('namelist2');
- ul.innerHTML = list;
+ var ol  = document.getElementById('namelist2');
+ ol.innerHTML = listc;
           }
       }
   };
   
   //Make request 
-  var inputName = document.getElementById('name');
-var name = inputName.value;
+  var inputNamec = document.getElementById('comment');
+var name = inputNamec.value;
   request.open('GET','http://tnvmadhav.imad.hasura-app.io/submit-name?name='+name,true);
   request.send(null);
   
