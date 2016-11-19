@@ -104,6 +104,15 @@ function createTemplate(data)
   `;
   return htmlTemplate;
 }
+var names = [];
+app.get('/submit-name/', function(req,res) { //submit-name?name=xxxxxx
+    //Get name from request
+    var name = req.query.name;
+    
+    names.push(name);
+    //JSON javascript object notation
+     res.send(JSON.stringify(names));
+});
 
 app.get('/:ArticleName', function(req,res) {
    var ArticleName =  req.params.ArticleName;
@@ -117,15 +126,7 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-var names = [];
-app.get('/submit-name/', function(req,res) { //submit-name?name=xxxxxx
-    //Get name from request
-    var name = req.query.name;
-    
-    names.push(name);
-    //JSON javascript object notation
-     res.send(JSON.stringify(names));
-});
+
 
 
 
