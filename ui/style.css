@@ -17,6 +17,7 @@ body {
 }
 
 .img-medium {
+    background :rgb(200, 212, 196);
     display: inline-block;
     border: 1px solid white;
     border-radius:50%;
