@@ -30,7 +30,7 @@ button.onclick = function() {
 
 //submit name
 
-var submit = document.getElementById('submit_btn');
+/*var submit = document.getElementById('submit_btn');
 submit.onclick  = function() {
   //Send a request to the server and send the names
   //Capture the list of names and render it in the list
@@ -62,4 +62,4 @@ var name = inputName.value;
   request.open('GET','http://tnvmadhav.imad.hasura-app.io/submit-name?name='+name,true);
   request.send(null);
   
-};
+}; */
