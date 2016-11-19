@@ -86,8 +86,8 @@ submitc.onclick  = function() {
              var comments = requestc.responseText;
              comments = JSON.parse(comments);
           var  listc = '';
-          for(var i=0; i<names.length; i++){
-     listc += '<li>'+ names[i] + '</li>';
+          for(var i=0; i<comments.length; i++){
+     listc += '<li>'+ comments[i] + '</li>';
      }
  var ol  = document.getElementById('namelist2');
  ol.innerHTML = listc;
