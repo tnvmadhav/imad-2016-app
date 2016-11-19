@@ -112,6 +112,15 @@ app.get('/submit-name', function(req,res) { //submit-name?name=xxxxxx
     //JSON javascript object notation
      res.send(JSON.stringify(names));
 });
+var namesc = [];
+app.get('/submit-comment', function(req,res) { //submit-name?name=xxxxxx
+    //Get name from request
+    var namec = req.query.namec;
+    
+    namesc.push(namec);
+    //JSON javascript object notation
+     res.send(JSON.stringify(namesc));
+});
 
 app.get('/:ArticleName', function(req,res) {
    var ArticleName =  req.params.ArticleName;
