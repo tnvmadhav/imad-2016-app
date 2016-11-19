@@ -23,7 +23,6 @@ body {
     border-radius:50%;
     transition: 0.3s;
     display: block;
-    margin: left;
 
 }
 .img-medium:hover {
