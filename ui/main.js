@@ -68,37 +68,3 @@ var name = inputName.value;
 
 
 
-//comment box
-var submitc = document.getElementById('submit_btn2');
-submitc.onclick  = function() {
-  //Send a request to the server and send the names
-  //Capture the list of names and render it in the list
- 
-    
-   //Create a request object 
-  var requestc =  new XMLHttpRequest();  
-  
-  //Capture a response and store it in a variable
-  requestc.onreadystatechange = function() {
-      if(requestc.readyState === XMLHttpRequest.DONE){
-          //take some action 
-          if(requestc.status ===200) {
-             var comments = requestc.responseText;
-             comments = JSON.parse(comments);
-          var  listc = '';
-          for(var i=0; i<comments.length; i++){
-     listc += '<li>'+ comments[i] + '</li>';
-     }
- var ol  = document.getElementById('namelist2');
- ol.innerHTML = listc;
-          }
-      }
-  };
-  
-  //Make request 
-  var inputNamec = document.getElementById('comment');
-var namec = inputNamec.value;
-  request.open('GET','http://tnvmadhav.imad.hasura-app.io/submit-comment?namec='+namec,true);
-  request.send(null);
-  
-}; 
