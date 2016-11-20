@@ -146,7 +146,7 @@ app.get('/submit-comment', function(req,res) { //submit-name?name=xxxxxx
 
 app.get('/articles/:ArticleName', function(req,res) {
    
-   pool.query("SELECT * FROM article WHERE title = '"+req.params.ArticleName + "'", function(err,result){
+   pool.query("SELECT * FROM article WHERE title = $1",[req.params.ArticleName], function(err,result){
        if(err){
            res.status(500).send(err.toString());
        } else {
