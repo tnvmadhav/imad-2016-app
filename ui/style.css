@@ -27,7 +27,8 @@ body {
 
 }
 .img-medium:hover {
-    box-shadow: 0 0 5px 1px rgba(51, 255, 0, 1);                 
+    box-shadow: 0 0 5px 1px rgba(51, 255, 0, 1);  
+    margin: 0 0 10px 10px;
 }
 .container {
     max-width: 800px;
