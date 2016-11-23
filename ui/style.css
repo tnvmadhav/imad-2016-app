@@ -19,6 +19,16 @@ body {
     height: 200px;
 }
 
+.img-medium {
+    display: inline-block;
+    border: 1px solid white;
+    border-radius:50%;
+    transition: 0.3s;
+
+}
+.img-medium:hover {
+    box-shadow: 0 0 5px 1px rgba(51, 255, 0, 1);                 
+}
 .container {
     max-width: 800px;
     margin: 0 auto;
