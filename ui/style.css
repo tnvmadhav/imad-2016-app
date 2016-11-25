@@ -1,9 +1,5 @@
 body {
-    background-image: url("http://cubeupload.com/im/kxuhoi.jpg");
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    color:rgb(87, 94, 85);
     font-family: sans-serif;
     margin-top: 60px;
 }
